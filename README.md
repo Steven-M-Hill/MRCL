@@ -40,6 +40,17 @@ There are three yeast data experiments. To run each of these:
 ```
 source("code/runMainExperimentsYeastTCPA.R")
 ```
-with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES". These correspond to the results shown in Figures 1, 2 and 3 in the [manuscript](https://arxiv.org/abs/1612.05678) respectively. The data used to generate these figures can be found in the files [output/yeast_random/results/collatedResults.RData](output/yeast_random/results/collatedResults.RData), [output/yeast_row-wise/results/collatedResults.RData](output/yeast_row-wise/results/collatedResults.RData) and [output/yeast_row-wise_GIES/results/collatedResults.RData](output/yeast_row-wise_GIES/results/collatedResults.RData).
+with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES". These correspond to the results shown in Figures 1, 2 and 3 in the [manuscript](https://arxiv.org/abs/1612.05678) respectively. The data used to generate these figures can be found in the files [output/yeast_random/results/collatedResults.RData](output/yeast_random/results/collatedResults.RData), [output/yeast_row-wise/results/collatedResults.RData](output/yeast_row-wise/results/collatedResults.RData) and [output/yeast_row-wise_GIES/results/collatedResults.RData](output/yeast_row-wise_GIES/results/collatedResults.RData) respectively.
 
-'R.matlab',--> 
+##### Dataset D2: Cancer Cell Line Protein Time-Course Data (Section 3.3 of [manuscript](https://arxiv.org/abs/1612.05678))
+
+###### Data
+The cancer cell line protein data is due to [Hill et al. (2017)](https://www.cell.com/cell-systems/fulltext/S2405-4712(16)30408-2) and is available to download from [this GitHub page](https://github.com/Steven-M-Hill/causal-signaling-networks-CellSystems2016). 
+In the file [`experimentFunctions.R`](code/experimentFunctions.R), there is a function `importCellLineData` that downloads the required files, extracts the required data and saves the resulting data in the [data](data) directory as file [`cellLineData.RData`](data/cellLineData.RData). Running this function requires the R package `R.matlab`.
+
+###### Analysis
+To run the cell line data analysis corresponding to the results shown in Figure 4 in the [manuscript](https://arxiv.org/abs/1612.05678):
+```
+source("code/runMainExperimentsCellLine.R")
+```
+The data used to generate Figure 4 can be found in the file [output/cellLine/results/collatedResults.RData](output/cellLine/results/collatedResults.RData).
