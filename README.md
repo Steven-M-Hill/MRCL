@@ -14,7 +14,7 @@ install.packages('kernlab')
 
 ### Manuscript analysis scripts
 
-R scripts and functions to reproduce the results in Section 3 of the manuscript are provided in the [code](code) directory.  
+R scripts and functions to reproduce the results in Section 3 of the [manuscript](https://arxiv.org/abs/1612.05678) are provided in the [code](code) directory.  
 
 To run the analysis scripts, the working directory in R must contain the [code](code) directory and the [data](data) directory.  
 
@@ -28,7 +28,13 @@ install.packages('pROC', 'glmnet', 'caret', 'pcalg', 'dplyr',
                  'kernlab', 'doParallel', 'doRNG', 'ggplot2', 'RColorBrewer')
 ```
 
-##### Dataset D1: Yeast Gene Expression (Section 3.2 of manuscript)
+##### Dataset D1: Yeast Gene Expression (Section 3.2 of [manuscript](https://arxiv.org/abs/1612.05678))
+
+###### Data
+The yeast gene expression knockout data is due to [Kemmeren et al. (2014)](https://www.cell.com/abstract/S0092-8674(14)00342-0) and is available to download at [The Deleteome webpage](http://deleteome.holstegelab.nl/). We use the file [Kemmeren.RData](http://deleteome.holstegelab.nl/data/downloads/causal_inference/Kemmeren.RData) on the Downloads/causal inference subpage.  
+A function to download this file and perform post-processing is provided.
+
+###### Analysis
 
 <!--note that code is provided that obtains two of the files ([yeastData.RData](data/yeastData.RData) and [cellLineData.RData](data/cellLineData.RData)) from their source and performs post-processing.
 'R.matlab',--> 
