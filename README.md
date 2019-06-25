@@ -40,7 +40,7 @@ There are three yeast data experiments. To run each of these:
 ```
 source("code/runMainExperimentsYeastTCPA.R")
 ```
-with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES". These correspond to the results shown in Figures 1, 2 and 3 in the [manuscript](https://arxiv.org/abs/1612.05678) respectively. The data used to generate these figures can be found in the files [output/yeast_random/results/collatedResults.RData](output/yeast_random/results/collatedResults.RData), [output/yeast_row-wise/results/collatedResults.RData](output/yeast_row-wise/results/collatedResults.RData) and [output/yeast_row-wise_GIES/results/collatedResults.RData](output/yeast_row-wise_GIES/results/collatedResults.RData) respectively.
+with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES". These correspond to the results shown in Figures 1, 2 and 3 in the [manuscript](https://arxiv.org/abs/1612.05678) respectively. The data used to generate these figures can be found in the files [`output/yeast_random/results/collatedResults.RData`](output/yeast_random/results/collatedResults.RData), [`output/yeast_row-wise/results/collatedResults.RData`](output/yeast_row-wise/results/collatedResults.RData) and [`output/yeast_row-wise_GIES/results/collatedResults.RData`](output/yeast_row-wise_GIES/results/collatedResults.RData) respectively.
 
 ##### Dataset D2: Cancer Cell Line Protein Time-Course Data (Section 3.3 of [manuscript](https://arxiv.org/abs/1612.05678))
 
@@ -53,4 +53,16 @@ To run the cell line data analysis corresponding to the results shown in Figure 
 ```
 source("code/runMainExperimentsCellLine.R")
 ```
-The data used to generate Figure 4 can be found in the file [output/cellLine/results/collatedResults.RData](output/cellLine/results/collatedResults.RData).
+The data used to generate Figure 4 can be found in the file [`output/cellLine/results/collatedResults.RData`](output/cellLine/results/collatedResults.RData).
+
+##### Dataset D3: Human Cancer Data (Section 3.4 of [manuscript](https://arxiv.org/abs/1612.05678))
+
+###### Data
+These data are part of the [The Cancer Genome Atlas](http://cancergenome.nih.gov/) (TCGA) and are presented in [Akbani et al. (2014)](https://www.nature.com/articles/ncomms4887). The dataset used for our analysis can be found in the file [`data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData`](data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData). This was a subset of the data available at [The Cancer Proteome Atlas (TCPA) Portal](https://tcpaportal.org/). In particular, we used a subset of the pan-cancer (version 19) level 4 data (portal data release version 4.0; note that the portal has now gone beyond this data release and, at the time of writing, only the most recent data release is available to download).
+
+###### Analysis
+To run the TCPA data analysis corresponding to the results shown in Figure 5 in the [manuscript](https://arxiv.org/abs/1612.05678):
+```
+source("code/runMainExperimentsYeastTCPA.R")
+```
+with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to "TCPA". The data used to generate Figure 5 can be found in the file [`output/TCPA/results/collatedResults.RData`](output/TCPA/results/collatedResults.RData)
