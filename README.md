@@ -32,7 +32,7 @@ install.packages('pROC', 'glmnet', 'caret', 'pcalg', 'dplyr',
 
 ###### Data
 The yeast gene expression knockout data is due to [Kemmeren et al. (2014)](https://www.cell.com/abstract/S0092-8674(14)00342-0) and is available to download at [The Deleteome webpage](http://deleteome.holstegelab.nl/). We use the file [Kemmeren.RData](http://deleteome.holstegelab.nl/data/downloads/causal_inference/Kemmeren.RData) on the Downloads/causal inference subpage.  
-A function to download this file and perform post-processing is provided.
+In the file [`experimentFunctions.R`](code/experimentFunctions.R), there is a function `importYeastData` that downloads this data file, performs post-processing and saves the processed data in the [data](data) directory as file [`yeastData.RData`](data/yeastData.RData).
 
 ###### Analysis
 
