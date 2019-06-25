@@ -58,7 +58,7 @@ The data used to generate Figure 4 can be found in the file [`output/cellLine/re
 ##### Dataset D3: Human Cancer Data (Section 3.4 of [manuscript](https://arxiv.org/abs/1612.05678))
 
 ###### Data
-These data are part of the [The Cancer Genome Atlas](http://cancergenome.nih.gov/) (TCGA) and are presented in [Akbani et al. (2014)](https://www.nature.com/articles/ncomms4887). The dataset used for our analysis can be found in the file [`data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData`](data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData). This was a subset of the data available at [The Cancer Proteome Atlas (TCPA) Portal](https://tcpaportal.org/). In particular, we used a subset of the pan-cancer (version 19) level 4 data (portal data release version 4.0; note that the portal has now gone beyond this data release and, at the time of writing, only the most recent data release is available to download).
+These data are part of the [The Cancer Genome Atlas](http://cancergenome.nih.gov/) (TCGA) and are presented in [Akbani et al. (2014)](https://www.nature.com/articles/ncomms4887). The dataset used for our analysis can be found in the file [`data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData`](data/TCGA-PANCAN19-L4-BRCA-35phosphoSubset.RData). This was a subset of the data available at [The Cancer Proteome Atlas (TCPA) Portal](https://tcpaportal.org/). In particular, we used a subset of the pan-cancer 19 level 4 data (portal data release version 4.0; note that the portal has now gone beyond this data release and, at the time of writing, only the most recent data release is available to download).
 
 ###### Analysis
 To run the TCPA data analysis corresponding to the results shown in Figure 5 in the [manuscript](https://arxiv.org/abs/1612.05678):
@@ -66,3 +66,10 @@ To run the TCPA data analysis corresponding to the results shown in Figure 5 in 
 source("code/runMainExperimentsYeastTCPA.R")
 ```
 with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to "TCPA". The data used to generate Figure 5 can be found in the file [`output/TCPA/results/collatedResults.RData`](output/TCPA/results/collatedResults.RData)
+
+##### Generation of manuscript figures
+All the figures in the manuscript can be generated as follows:
+```
+source("code/generateFigures.R")
+```
+Figures are saved in the [output](output) directory. For example, for Dataset D3 (TCPA), figures can be found in [output/TCPA/plots](output/TCPA/plots).
