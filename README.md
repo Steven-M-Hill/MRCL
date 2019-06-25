@@ -33,13 +33,13 @@ install.packages('pROC', 'glmnet', 'caret', 'pcalg', 'dplyr',
 
 ###### Data
 The yeast gene expression knockout data is due to [Kemmeren et al. (2014)](https://www.cell.com/abstract/S0092-8674(14)00342-0) and is available to download at [The Deleteome webpage](http://deleteome.holstegelab.nl/). We use the file [Kemmeren.RData](http://deleteome.holstegelab.nl/data/downloads/causal_inference/Kemmeren.RData) on the Downloads/causal inference subpage.  
-In the file [`experimentFunctions.R`](code/experimentFunctions.R), there is a function `importYeastData` that downloads [Kemmeren.RData](http://deleteome.holstegelab.nl/data/downloads/causal_inference/Kemmeren.RData), extracts the required data and saves the resulting data in the [data](data) directory as file [`yeastData.RData`](data/yeastData.RData).
+In the file [`experimentFunctions.R`](code/experimentFunctions.R), there is a function `importYeastData` that downloads [Kemmeren.RData](http://deleteome.holstegelab.nl/data/downloads/causal_inference/Kemmeren.RData), extracts the required data and saves the resulting dataset in the [data](data) directory as file [`yeastData.RData`](data/yeastData.RData).
 
 ###### Analysis
-To run the yeast data analysis:
+There are three yeast data experiments. To run each of these:
 ```
 source("code/runMainExperimentsYeastTCPA.R")
 ```
-with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES".
+with the variable `experiment` on [line 5 of runMainExperimentsYeastTCPA.R](https://github.com/Steven-M-Hill/MRCL/blob/b772511d7f5b77f6889b6dc9aef5ad2b03c25ae3/code/runMainExperimentsYeastTCPA.R#L5) set to either "yeast_random", "yeast_row-wise" or "yeast_row-wise_GIES". These correspond to the results shown in Figures 1, 2 and 3 in the [manuscript](https://arxiv.org/abs/1612.05678) respectively. The data used to generate these figures can be found in the files [output/yeast_random/collatedResults.RData](output/yeast_random/collatedResults.RData), [output/yeast_row-wise/collatedResults.RData](output/yeast_row-wise/collatedResults.RData) and [output/yeast_row-wise_GIES/collatedResults.RData](output/yeast_row-wise_GIES/collatedResults.RData).
 
 'R.matlab',--> 
