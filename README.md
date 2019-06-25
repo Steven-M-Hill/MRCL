@@ -14,9 +14,9 @@ install.packages('kernlab')
 
 ### Manuscript analysis scripts
 
-R scripts and functions are provided in the [code](code) directory to reproduce the results in Section 3 of the manuscript.  
+R scripts and functions to reproduce the results in Section 3 of the manuscript are provided in the [code](code) directory.  
 
-To run the analysis scripts, your working directory in R must contain the [code](code) directory and the [data](data) directory.  
+To run the analysis scripts, the working directory in R must contain the [code](code) directory and the [data](data) directory.  
 
 Details of the origin of the three data files in the [data](data) directory are provided below.  
 
