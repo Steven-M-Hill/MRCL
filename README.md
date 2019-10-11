@@ -1,6 +1,7 @@
 # Manifold Regularized Causal Learning (MRCL)
-R code for Manifold Regularized Causal Learning (MRCL) and scripts to run the analysis presented in:
-#### Hill, Oates, Blythe &amp; Mukherjee (2019). Causal Learning via Manifold Regularization. arXiv preprint [arXiv:1612.05678](https://arxiv.org/abs/1612.05678).
+R code for Manifold Regularized Causal Learning (MRCL) and scripts to run the analysis presented in:  
+[Hill*, Oates*, Blythe &amp; Mukherjee* (2019). Causal Learning via Manifold Regularization. *Journal of Machine Learning Research* 20(127):1−32](http://jmlr.org/papers/v20/18-383.html).  
+*Equal contributions
 
 ### MRCL source code
 The file [`mrcl.R`](./code/mrcl.R) in the [code](code) directory contains the source code for running MRCL.  
